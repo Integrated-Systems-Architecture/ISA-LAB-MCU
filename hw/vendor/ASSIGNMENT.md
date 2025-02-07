@@ -9,6 +9,6 @@ In this laboratory experience, you must use Vendor to import the RTL description
 
 To do so, you need to write the appropriate `conv1d.vendor.hjson` file, taking inspiration from the [`simple_cnt.vendor.hjson`](./simple_cnt.vendor.hjson) file in this directory, that imports the RTL description of a simple memory-mapped counter used by the [`sw/applications/simple-cnt`](./../../sw/applications/simple-cnt/main.c) application.
 
-Once yu have created the file, run the `make vendor-update` target from the top-level makefile, that pulls all the vendored IPs into this directory.
+Once you have created the file, run the `make vendor-update` target from the top-level makefile, that pulls all the vendored IPs into this directory.
 
-After doing so, you can instantiate the module inside [`gr_heep_peripherals.sv.tpl`](../peripherals/gr_heep_peripherals.sv.tpl), and add a dependency into the top-level [`GR-HEEP.core`](../../GR-HEEP.core) file, exactly as it is already done for the simple counter.
+After doing so, you can instantiate the module inside [`gr_heep_peripherals.sv.tpl`](../peripherals/gr_heep_peripherals.sv.tpl), and add a dependency into the [`peripherals.core`](../peripherals.core) file, exactly as it is already done for the simple counter.
